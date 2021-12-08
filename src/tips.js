@@ -24,7 +24,7 @@ function getData() {
 
     //write in DOM
     document.body.innerHTML = result;
-  }, 1000);
+  }, 3000);
 }
 
 //function => take newData and callback as parameters
