@@ -9,10 +9,9 @@ let friend2 = {
   profession: 'Artist',
 };
 
-//function
-
-function printDetail() {
-  console.log(this);
+//function => now lets pass the city as parameter
+function printDetail(city) {
+  console.log(this, city);
 }
 
 //*Here comes the concept of Call() function because as we notice that we're writing the same function printDetail() in two objects
@@ -23,5 +22,5 @@ function printDetail() {
 
 //* now lets say we have function outside the object
 //we can call the function and pass the object
-printDetail.call(friend1);
-printDetail.call(friend2);
+printDetail.call(friend1.name, 'Chitwan');
+printDetail.call(friend2.name, 'Bharatpur');
