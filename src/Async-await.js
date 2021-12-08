@@ -35,7 +35,7 @@ function createData(newData) {
       //let push newData parameter to data
       data.push(newData);
       //if error
-      let error = false;
+      let error = true;
       //if there is no error then call the resolve function otherwise reject
 
       if (error) return reject('something went wrong');
