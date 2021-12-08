@@ -18,8 +18,8 @@ function getData() {
   setTimeout(() => {
     let result = '';
 
-    data.forEach((person) => {
-      result += `<li>${person.name}</li>`;
+    data.map((person) => {
+      result += `<li>${person.name}</li> <li>${person.profession}</li>`;
     });
 
     //write in DOM
