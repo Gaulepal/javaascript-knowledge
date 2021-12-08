@@ -28,22 +28,29 @@ function getData() {
 }
 
 //function => take newData and callback as parameters
-function createData(newData, callback) {
-  setTimeout(() => {
-    //let push newData parameter to data
-    data.push(newData);
-    callback(); //this is callback
-  }, 2000);
+function createData(newData) {
+  //Promise returns if everything resolve if everything goes well otherwise it returns reject
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      //let push newData parameter to data
+      data.push(newData);
+      //if error
+      let error = false;
+      //if there is no error then call the resolve function otherwise reject
+      if (!error) {
+        resolve();
+      } else {
+        reject('kuch kadbad hai bhai');
+      }
+    }, 2000);
+  });
 }
 
 //call func with pass new data => now lets pass getData as callback
-createData(
-  {
-    name: 'Dinesh',
-    profession: 'Electrician',
-  },
-  getData
-);
+createData({
+  name: 'Dinesh',
+  profession: 'Electrician',
+});
 
 //call function
 // getData();
