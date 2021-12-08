@@ -50,7 +50,9 @@ function createData(newData) {
 createData({
   name: 'Dinesh',
   profession: 'Electrician',
-}).then(getData);
+})
+  .then(getData)
+  .catch((error) => console.log(error));
 
 //call function
 // getData();
