@@ -37,11 +37,16 @@ function createData(newData) {
       //if error
       let error = false;
       //if there is no error then call the resolve function otherwise reject
-      if (!error) {
-        resolve();
-      } else {
-        reject('kuch kadbad hai bhai');
-      }
+
+      if (error) return reject('something went wrong');
+
+      resolve();
+
+      // if (!error) {
+      //   resolve();
+      // } else {
+      //   reject('kuch kadbad hai bhai');
+      // }
     }, 2000);
   });
 }
