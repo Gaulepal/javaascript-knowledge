@@ -16,3 +16,4 @@ let friend2 = {
 //when we use `this` keyword within the object then it points the same object
 //lets write the function in friend1 and access for both objects
 friend1.printDetail.call(friend2.profession);
+//this is also called function borrow
