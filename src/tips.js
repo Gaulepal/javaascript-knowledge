@@ -24,7 +24,7 @@ function getData() {
 
     //write in DOM
     document.body.innerHTML = result;
-  }, 3000);
+  }, 1000);
 }
 
 //function => take newData and callback as parameters
@@ -32,14 +32,18 @@ function createData(newData, callback) {
   setTimeout(() => {
     //let push newData parameter to data
     data.push(newData);
+    callback(); //this is callback
   }, 2000);
 }
 
-//call func with pass new data
-createData({
-  name: 'Dinesh',
-  profession: 'Electrician',
-});
+//call func with pass new data => now lets pass getData as callback
+createData(
+  {
+    name: 'Dinesh',
+    profession: 'Electrician',
+  },
+  getData
+);
 
 //call function
-getData();
+// getData();
