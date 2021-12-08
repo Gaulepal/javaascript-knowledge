@@ -1,17 +1,20 @@
 //data
-let friends = {
+let friend1 = {
   name: 'Rajan',
   profession: 'Electrical Engineer',
   printDetail: function () {
     document.body.innerHTML = this.name;
   },
 };
+//lets create another object
+let friend2 = {
+  name: 'Sita Ram',
+  profession: 'Artist',
+  printDetail: function () {
+    document.body.innerHTML = this.name;
+  },
+};
 
 //call
-friends.printDetail();
-
-//call
-// document.body.innerHTML = friends.map((person) => person.name);
-
-//call function
-// document.body.innerHTML = friends.map((person) => person.printDetail());
+friend1.printDetail();
+friend2.printDetail();
