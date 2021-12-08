@@ -12,7 +12,7 @@ let friend2 = {
 //function
 
 function printDetail() {
-  console.log(this.name);
+  console.log(this);
 }
 
 //*Here comes the concept of Call() function because as we notice that we're writing the same function printDetail() in two objects
