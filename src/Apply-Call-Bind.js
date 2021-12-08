@@ -32,5 +32,5 @@ printDetail.apply(friend1, ['Bharatpur', 'Nepal']); //here we can pass as an arr
 //basically bind is like call() func but we should not call it directly, we make a copy and call or invoke when we need
 
 //lets store in a variable and call it at the bottom => as we can see that we can store in variable and invoke when we need
-let funWithFriend = printDetail.bind(friend1.name, 'Pokhara', 'Nepal');
+const funWithFriend = printDetail.bind(friend1.name, 'Pokhara', 'Nepal');
 funWithFriend();
