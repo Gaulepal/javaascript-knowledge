@@ -10,12 +10,9 @@ let friend2 = {
 };
 
 //function
-const printDetail = function () {
-  console.log(this.name);
-};
 
-function printFriend() {
-  console.log(this.profession);
+function printDetail() {
+  console.log(this.name);
 }
 
 //*Here comes the concept of Call() function because as we notice that we're writing the same function printDetail() in two objects
@@ -27,4 +24,4 @@ function printFriend() {
 //* now lets say we have function outside the object
 //we can call the function and pass the object
 printDetail.call(friend1);
-printFriend.call(friend1);
+printDetail.call(friend2);
