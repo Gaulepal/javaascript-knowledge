@@ -31,13 +31,13 @@ function getData() {
 function createData(newData) {
   //Promise returns if everything resolve if everything goes well otherwise it returns reject
   return new Promise((resolve, reject) => {
+    //creating new Object using Promise
     setTimeout(() => {
       //let push newData parameter to data
       data.push(newData);
       //if error
-      let error = true;
+      let error = false;
       //if there is no error then call the resolve function otherwise reject
-
       if (error) return reject('something went wrong');
 
       resolve();
