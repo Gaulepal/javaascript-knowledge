@@ -27,5 +27,19 @@ function getData() {
   }, 1000);
 }
 
+//function => take newData and callback as parameters
+function createData(newData, callback) {
+  setTimeout(() => {
+    //let push newData parameter to data
+    data.push(newData);
+  }, 2000);
+}
+
+//call func with pass new data
+createData({
+  name: 'Dinesh',
+  profession: 'Electrician',
+});
+
 //call function
 getData();
